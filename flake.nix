@@ -15,6 +15,10 @@
         path = ./templates/ruby;
         description = "A development environment for Ruby.";
       };
+      rust = {
+        path = ./templates/rust;
+        description = "A development environment for Rust.";
+      };
     };
   };
 }
