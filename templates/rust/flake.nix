@@ -2,9 +2,9 @@
   description = "nix shell for rust";
 
   inputs = {
-    nixpkgs.url = github:nixos/nixpkgs/nixos-unstable; # unstable version of nixpkgs
-    # nixpkgs.url = github:nixos/nixpkgs/release-22.11; # stable version of nixpkgs
-    flake-utils.url = github:numtide/flake-utils;
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; # unstable version of nixpkgs
+    # nixpkgs.url = "github:nixos/nixpkgs/release-23.05"; # stable version of nixpkgs
+    flake-utils.url = "github:numtide/flake-utils";
     flake-compat = {
       url = "github:edolstra/flake-compat";
       flake = false;
@@ -28,6 +28,8 @@
             cargo
             clippy
             rust-analyzer
+          ];
+          buildInputs = with pkgs; [
           ];
         };
       });
